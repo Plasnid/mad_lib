@@ -70,8 +70,8 @@ echo("
     <input type=\"submit\" name=\"submit\" id=\"submit\" class=\"submit\" value=\"Update\">
 </form>
 ");
-if($month){
-echo("Thats right!  $months_arr[$month] is national $corner_items[$corner_item] month!");
+if($month && $corner_item && $user_name){
+echo("Thats right $user_name!  $months_arr[$month] is national $corner_items[$corner_item] month!");
 };
 echo("
 </body>
