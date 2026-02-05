@@ -32,24 +32,19 @@ echo("<!DOCTYPE html>
 
 echo("
 <form action=\"./index.php\" method=\"post\">
-    <formset>
+    <fieldset>
         <label for=\"user_name\">Recipient Name:</label>
         <input type=\"text\" value=\"$user_name\" id=\"user_name\" name=\"user_name\" required minlength=\"2\" maxlength=\"10\" size=\"10\" />
-    </formset>
+    </fieldset>
     <label for=\"month\">Month:</label>
     <select name=\"month\" id=\"month\">");
-    /**if($_POST["user_name"]){
-        echo($_POST["user_name"]);
-    }else{
-        echo("We do not have a user name");
-    }*/
 foreach ($months_arr as $key=>$value) {
     if ($key == $month) {
         $selected = " selected=\"selected\"";
     } else {
         $selected = "";
     }
-    echo("<option value=\"$key\"$selected>$value</option>");
+    
 }
 echo("</select>
     <fieldset>
